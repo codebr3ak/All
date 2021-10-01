@@ -3,15 +3,15 @@ app = Flask(__name__)
 
 posts = [
     {
-        'author': 'Corey James'
-        'title': 'Blog post 1'
-        'content': 'First post content'
+        'author': 'Corey James',
+        'title': 'Blog post 1',
+        'content': 'First post content',
         'date': 'April 20, 2020'
-    }
+    },
     {
-        'author': 'Ralp Bunche'
-        'title': 'Blog post 2'
-        'content': 'Second post content'
+        'author': 'Ralph Bunche',
+        'title': 'Blog post 2',
+        'content': 'Second post content',
         'date': 'September 21, 2021'
     }
 ]
@@ -19,7 +19,7 @@ posts = [
 @app.route('/')
 @app.route('/home')
 def home():     
-    return render_template('home.html' posts = posts)
+    return render_template ('home.html', posts = posts)
 
 @app.route('/about')
 def about():
